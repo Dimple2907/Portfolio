@@ -1,38 +1,35 @@
 .App {
   text-align: center;
+  color: #c770f0 !important;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#no-scroll {
+  overflow: hidden;
+  height: 100vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#scroll {
+  overflow-y: auto;
+  height: 100vh;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* Global color override */
+* {
+  color: #c770f0 !important;
 }
 
-.App-link {
-  color: #61dafb;
+/* Ensure links stay purple */
+a, a:hover, a:visited, a:active {
+  color: #c770f0 !important;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Button text should be white on purple background */
+.btn-primary {
+  color: white !important;
+  background-color: #c770f0 !important;
+}
+
+/* Force all text elements to be purple */
+h1, h2, h3, h4, h5, h6, p, span, div, button, input, textarea {
+  color: #c770f0 !important;
 }

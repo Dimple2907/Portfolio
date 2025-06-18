@@ -1,0 +1,52 @@
+/* Simple background effect */
+.simple-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: linear-gradient(to bottom, #1a1a1a, #2d1950);
+  overflow: hidden;
+}
+
+.stars {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(2px 2px at calc(random() * 100%) calc(random() * 100%), white, transparent);
+  background-size: 200px 200px;
+  animation: moveStars 100s linear infinite;
+}
+
+@keyframes moveStars {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-100%);
+  }
+}
+
+/* Simple typing effect */
+.simple-type {
+  display: inline-block;
+  font-family: monospace;
+  font-size: 1.5em;
+  color: #c770f0;
+}
+
+.cursor {
+  display: inline-block;
+  width: 2px;
+  animation: blink 1s infinite;
+  color: #c770f0;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
