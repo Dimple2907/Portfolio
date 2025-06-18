@@ -1,7 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import myImg from "../../Assets/avatar.svg";
-import Tilt from "react-parallax-tilt";
 import {
   AiFillGithub,
   AiOutlineTwitter,
@@ -36,13 +35,7 @@ function Home2() {
               <br />
             </p>
           </Col>
-          <br>
-          </br>
-          {/* <Col md={4} className="myAvtar">
-            <Tilt>
-              <img src={myImg} className="img-fluid" alt="avatar" />
-            </Tilt>
-          </Col> */}
+          
         </Row>
         <Row>
           <Col md={12} className="home-about-social">
@@ -61,19 +54,19 @@ function Home2() {
                   <AiFillGithub />
                 </a>
               </li>
-              {/* <li className="social-icons">
+              <li className="social-icons">
                 <a
-                  href="https://twitter.com/Soumyajit4419"
+                  href="https://twitter.com/"
                   target="_blank"
                   rel="noreferrer"
                   className="icon-colour  home-social-icons"
                 >
                   <AiOutlineTwitter />
                 </a>
-              </li> */}
+              </li>
               <li className="social-icons">
                 <a
-                  href="https://www.linkedin.com/in/dimple-makwana-072864276/"
+                  href="https://www.linkedin.com/in/dimple-makwana/"
                   target="_blank"
                   rel="noreferrer"
                   className="icon-colour  home-social-icons"
@@ -81,16 +74,16 @@ function Home2() {
                   <FaLinkedinIn />
                 </a>
               </li>
-              {/* <li className="social-icons">
+              <li className="social-icons">
                 <a
-                  href="https://www.instagram.com/soumyajit4419"
+                  href="https://www.instagram.com/"
                   target="_blank"
                   rel="noreferrer"
                   className="icon-colour home-social-icons"
                 >
                   <AiFillInstagram />
                 </a>
-              </li> */}
+              </li>
             </ul>
           </Col>
         </Row>
@@ -98,4 +91,5 @@ function Home2() {
     </Container>
   );
 }
+
 export default Home2;

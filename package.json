@@ -10,7 +10,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "react-parallax-tilt": "^1.8.105",
     "@react-pdf/renderer": "^3.1.14",
     "bootstrap": "^5.3.2",
     "react": "^18.2.0",
