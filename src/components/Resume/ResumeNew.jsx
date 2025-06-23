@@ -62,7 +62,7 @@ function ResumeNew() {
           }}
         >
           <Button
-            variant="primary"
+            className="resume-download-btn"
             onClick={handleDownload}
             style={{ maxWidth: "250px" }}
           >

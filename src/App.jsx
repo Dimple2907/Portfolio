@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar.jsx";
 import Home from "./components/Home/Home.jsx";
 import About from "./components/About/About.jsx";
 import Projects from "./components/Projects/Projects.jsx";
+import Footer from "./components/Footer.jsx";
 import Resume from "./components/Resume/ResumeNew.jsx";
 import {
   BrowserRouter as Router,
@@ -14,17 +15,15 @@ import {
 import ScrollToTop from "./components/ScrollToTop.jsx";
 import "./style.css";
 import "./App.css";
-import "./animations.css";
-import "./components/simple-effects.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
-  const [load, updateLoad] = useState(true);
+  const [load, upadateLoad] = useState(true);
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      updateLoad(false);
-    }, 800);
+      upadateLoad(false);
+    }, 1200);
 
     return () => clearTimeout(timer);
   }, []);
@@ -42,6 +41,7 @@ function App() {
           <Route path="/resume" element={<Resume />} />
           <Route path="*" element={<Navigate to="/"/>} />
         </Routes>
+        <Footer />
       </div>
     </Router>
   );
