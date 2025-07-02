@@ -30,6 +30,16 @@ function Projects() {
             />
           </Col>
 
+           <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={airbnbClone}
+              isBlog={false}
+              title="Uber Clone"
+              description = "Developed a real-time ride-hailing application inspired by Uber, featuring secure user authentication, driver captain management, ride booking, and live map tracking. Implemented RESTful APIs for user and ride operations, real-time updates via Socket.io, and MongoDB for data storage. Focused on scalable backend architecture, modular controller-based routing, and JWT-based session management"
+              ghLink="https://github.com/Dimple2907/Uber_Clone"              
+            />
+          </Col>
+
           <Col md={4} className="project-card">
             <ProjectCard
               imgPath={ebirth}
