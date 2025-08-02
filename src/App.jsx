@@ -12,10 +12,12 @@ import {
   Routes,
   Navigate
 } from "react-router-dom";
+
 import ScrollToTop from "./components/ScrollToTop.jsx";
 import "./style.css";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { motion } from "framer-motion";
 
 function App() {
   const [load, upadateLoad] = useState(true);
@@ -31,7 +33,14 @@ function App() {
   return (
     <Router>
       <Preloader load={load} />
-      <div className="App" id={load ? "no-scroll" : "scroll"}>
+      <motion.div
+        className="App"
+        id={load ? "no-scroll" : "scroll"}
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: -30 }}
+        transition={{ duration: 0.6 }}
+      >
         <Navbar />
         <ScrollToTop />
         <Routes>
@@ -39,10 +48,10 @@ function App() {
           <Route path="/project" element={<Projects />} />
           <Route path="/about" element={<About />} />
           <Route path="/resume" element={<Resume />} />
-          <Route path="*" element={<Navigate to="/"/>} />
+          <Route path="*" element={<Navigate to="/" />} />
         </Routes>
         <Footer />
-      </div>
+      </motion.div>
     </Router>
   );
 }
